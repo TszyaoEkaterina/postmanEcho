@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 
-public class test1 {
+public class PostTest {
     @Test
     void shouldPost() {
         // Given - When - Then
@@ -17,7 +17,7 @@ public class test1 {
 // Проверки
                 .then()
                 .statusCode(200)
-                .body("data",equalTo("This is expected to be sent back as part of response body"))
+                .body("data", equalTo("some value"))
         ;
     }
 }
